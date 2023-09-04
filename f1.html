@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif; /* Change font if desired */
+        }
+
+        /* CSS for the navigation bar */
+        .navbar {
+            background-color: transparent; /*Set a transparent background*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        /* Style for the navigation bar links */
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 20px 30px;
+            text-decoration: none;
+            position: relative; /* Add relative positioning */
+        }
+
+        /* Add a pseudo-element for the gap */
+        .navbar a::before {
+            content: "";
+            position: absolute;
+            top: 50%; /* Adjust the gap's vertical position as needed */
+            right: -15px; /* Adjust the gap's width */
+            width: 30px; /* Adjust the gap's width */
+            height: 1px; /* Adjust the gap's height */
+            background-color: transparent; /* Set the gap's color */
+        }
+
+        /* Change the color of links on hover */
+        .navbar a:hover {
+            background-color: transparent;
+        }
+
+        /* Style for the image */
+        .navbar img {
+            height: 60px;
+            width: auto;
+            cursor: pointer;
+        }
+
+        /* Add smooth scrolling behavior to anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Style for the video background */
+        #video-background {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .service-container {
+         display: flex;
+         justify-content: space-between; /* Distribute items evenly */
+        }
+
+         /* Style for each service box */
+        .service-box {
+         flex: 1; /* Distribute available space evenly among service boxes */
+         text-align: center;
+         padding: 20px;
+         border: 1px solid black; /* Add a border for separation (optional) */
+         background-color: black; /* Background color for each box (optional) */
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for style (optional) */
+         margin: 10px; /* Adjust margin for spacing between boxes */
+         color: white;
+        }
+
+        /* About Us section */
+        #about {
+            background-color: transparent;
+            padding: 0;
+            color: white;
+            height: 100vh;
+            margin-left: 40px;
+        }
+
+        #services {
+            height: 100vh;
+        }
+
+        #services > h1 {
+            color: aliceblue;
+            font-size: 2em;
+            margin-left: 40px;
+        }
+
+        #about > h1 {
+            color: aliceblue;
+            font-size: 2em;
+        
+        }
+
+        #about ol {
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML for the navigation bar -->
+    <div class="navbar">
+        
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#" onclick="restartVideo();">
+            <img src="./Media/Sync_Ultra_Final-removebg_HD.png" alt="synQ Logo" id="home-button">
+            
+        </a>
+        <a href="#Vision">Vision</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Video background -->
+    <video autoplay muted loop id="video-background">
+        <source src="./Media/WebsiteBG_Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <section id="services" style="background-color: black;" ;>
+        <h1>Our Services</h1>
+        <div class="service-container">
+            <!-- Service Box 1 -->
+            <a href="service1.html" class="service-link">
+                <div class="service-box">
+                    <img  style="height: 20%;" src="./Media/QRaze.png" alt="Service 1">
+                    <h2>Generate QR Ticket</h2>
+                    <p>Description </p>
+                </div>
+            </a>
+    
+            <!-- Service Box 2 -->
+            <a href="service2.html" class="service-link">
+                <div class="service-box">
+                    <img src="service2.jpg" alt="Service 2">
+                    <h2>Service 2</h2>
+                    <p>Description of Service 2.</p>
+                </div>
+            </a>
+    
+            <!-- Service Box 3 -->
+            <a href="service3.html" class="service-link">
+                <div class="service-box">
+                    <img src="service3.jpg" alt="Service 3">
+                    <h2>Service 3</h2>
+                    <p>Description of Service 3.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <style>
+        
+    </style>
+
+    <!-- About Us section -->
+    <section id="about" style="background-color: black;">
+        <h1>About Us</h1>
+        <h2>Members</h2>
+        <ol>
+            <li>Atharv Sathe</li>
+            <li>Sarthak Sant</li>
+            <li>Vedansh Kapoor</li>
+            <li>Harsh Markandey</li>
+            <li>Ashish Kumar</li>
+        </ol>
+        <p>This is the About Us section. Write your content here.</p>
+    </section>
+
+    <!-- Your other sections (Services, Portfolio, Contact) go here -->
+
+    <script>
+        // Function to restart the video when the image button is clicked
+        function restartVideo() {
+            const video = document.getElementById('video-background');
+            video.currentTime = 0; // Reset video to the beginning
+            video.play(); // Play the video
+        }
+    </script>
+</body>
+</html>

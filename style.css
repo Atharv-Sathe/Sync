@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/* CSS for the navigation bar */
+.navbar {
+    background-color: black;
+    overflow: hidden;
+    
+}
+
+/* Style for the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 40px 40px;
+    text-decoration: none;
+    
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #333;
+}
+
+ /* Style for the image */
+ .navbar img {
+    height: 50px; /* Set the image height to 100% of the navigation bar's height */
+    width: auto; /* Maintain the image's aspect ratio */
+    
+}
+
