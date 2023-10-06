@@ -98,7 +98,7 @@ html {
 }
 
 /* Adding Rainbow Gradient to Our Services */
-#services #grad {
+#grad {
     color : linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
   }
 
