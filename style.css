@@ -72,23 +72,57 @@ html {
 }
 
 /* Style for each service box */
+
 .service-box {
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #666; 
-    background-color: #333; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    margin: 10px;
-    color: #fff; 
-    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
-}
-
-/* Hover effect for service boxes */
-.service-box:hover {
-    background-color: #007acc; 
-}
-
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .service-box:active,
+  .service-box:hover {
+    outline: 0;
+    color:white;
+  }
+  
+  .service-box span {
+    background-color: rgb(0, 0, 0);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .service-box:hover span {
+    background: none;
+  }
+  
+  @media (min-width: 768px) {
+    .service-box {
+      font-size: 24px;
+      min-width: 196px;
+    }
+  }
+  
 /* Service section */
 #services {
     background-color: #000;
