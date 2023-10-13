@@ -1,3 +1,51 @@
+.text{
+    color: white;
+}
+.qraze-upload-button {
+    margin-left: 41%;
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    margin-top: 35px;
+  }
+  
+  .qraze-upload-button:active,
+  .qraze-upload-button:hover {
+    outline: 0;
+    color:white;
+  }
+  
+  .qraze-upload-button span {
+    
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .qraze-upload-button:hover span {
+    background: none;
+  }
+  
+  @media (min-width: 768px) {
+    .qraze-upload-button {
+      min-width: 196px;
+    }
+  }
+
 
 #nav {
     padding-top: 0px;
