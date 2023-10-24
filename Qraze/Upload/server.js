@@ -3,17 +3,15 @@ const express = require('express');
 const multer = require('multer');
 
 const app = express();
-const port = 3000;
-
 const path = require('path');
 
 const fileStorageEngine = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, './files')
+        cb(null, 'C:\\Users\\athar\\OneDrive\\Desktop\\Project Exhibition I\\Sync\\Generate')
     },
     filename: (req, file, cb) => {
         const parts = file.mimetype.split('/');
-        cb(null, Date.now() + "--" + file.originalname);
+        cb(null, "Test.xlsx");
     }
 });
 

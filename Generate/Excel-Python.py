@@ -1,8 +1,8 @@
 import pandas as pd , csv ,random,os,qrcode
 
-# excel_file = r'C:\Users\athar\OneDrive\Desktop\Project Exhibition I\Sync\Qraze\Upload\files\Test.xlsx'
+excel_file = 'Test.xlsx'
 
-convert= pd.read_excel(r'C:\Users\athar\OneDrive\Desktop\Project Exhibition I\Sync\Qraze\Upload\files\Test.xlsx')
+convert= pd.read_excel(excel_file)
 
 #Generating Random Codes
 codelist=[]
