@@ -28,7 +28,8 @@ app.post('/single', upload.single('spreadsheet'), (req, res) => {
 
 app.post('/multiple', upload.array('spreadsheets', 3), (req, res) => {
     console.log(req.files);
-    res.send('Multiple file upload successful!');
+    // res.send('Multiple file upload successful!');
+    res.json({ message: 'Single file upload successful!' });
 });
 
 app.use(express.static('public'));

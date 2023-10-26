@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>File Upload</title>
+    <link rel="stylesheet" href="./upload.css">
 </head>
 
 <body>
@@ -11,10 +12,39 @@
         <input type="file" name="spreadsheet" />
         <button type="submit">Submit</button>
     </form>
+    <div id="message"></div>
     <!-- <form action="/multiple" method="post" enctype="multipart/form-data">
         <input type="file" name="images" multiple/>
         <button type="submit">Submit</button>
     </form> -->
+
+    <button id="generate-button">Generate</button>
+    <button id="download-button"><a href=""></a>Download</button>
+
+
+    <script>
+        const form = document.querySelector('form');
+        const messageDiv = document.getElementById('message');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch('/single', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                messageDiv.textContent = data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+    <script src="./server.js"></script>
 </body>
 
 </html>
